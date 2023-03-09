@@ -8,6 +8,7 @@
     
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- my css -->
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 
     <title>Hello, world!</title>
@@ -15,35 +16,71 @@
   <body>
     <div id="header" class="h-50" >
         <div class="content">
-            <h1 class="display-2">Hi, I'm Mckenna.</h1>
-            <h3>Studying Web Development at Columbus State</h3>
-            <p>I'm a developer and artist based in Florida. I have a strong interest in full-stack development and design.</p>
-            <button>Let's Talk</button>
+            <div class="test">
+                <h1 class="display-2">Hi, I'm Mckenna.</h1>
+                <h3>Studying Web Development at Columbus State</h3>
+                <p>I'm a developer and artist based in Florida. I have a strong interest in full-stack development and design.</p>
+                <button onclick="window.location.href='mailto:koetitz_mckenna@columbusstate.edu';">Let's Talk</button>
+            </div>
+            
         </div>
     </div>
     <div id="about" class="h-25">
-        <div class="content">
-            <h1>About me</h1>
-        <p>
-            I'm a student at Columbus State University completing my BS in Computer Science, concentrating in Web Development.
-            I'm currently in my last semester, so I am looking for full-time position in frontend, backend, and fullstack development.
-        </p>
-        <p>
-            Here are some technologies I am familair working with:
-            <ul>
-                <li>JavaScript</li>
-                <li>Node.js</li>
-                <li>HTML & CSS</li>
-                <li>Python</li>
-                <li>JSON</li>
-            </ul>
-        </p>
+        <div class="about-content">
+            <div class="profile-img w-25">
+                <img src="{{url_for('static', filename='me.jpeg')}}" alt="profile image"class="img-fluid" >
+            </div>
+            <div class="profile-words w-50">
+                <h1>About me</h1>
+                <p>
+                    I'm a student at Columbus State University completing my BS in Computer Science, concentrating in Web Development.
+                    I'm currently in my last semester, so I am looking for full-time position in frontend, backend, and fullstack development.
+                </p>
+                <p>
+                    Here are some technologies I am familiar working with:
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>HTML & CSS</li>
+                        <li>Python</li>
+                        <li>JSON</li>
+                    </ul>
+                </p>
+            </div>
+            
         </div>
         
     </div>
     <div id="exp" class="h-50">
-        <div class="content">
-            insert projects here as cards or something
+        <div class="exp-content">
+            <h1 class="mt-auto">Projects</h1>
+            <div class="projects-container">
+
+                <div class="card-deck">
+                    <div class="card">
+                      <img class="card-img-top img-fluid w-50" src="{{url_for('static', filename='musical-note-music.svg')}}" alt="Card image cap" >
+                      <div class="card-body">
+                        <h5 class="card-title">Spotify Search</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top img-fluid w-50" src="{{url_for('static', filename='edit-list-icon.svg')}}" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">To-Do List</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top img-fluid w-50" src="{{url_for('static', filename='rain.svg')}}" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Weather Forecast</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                      </div>
+                    </div>
+                  </div>
+
+            </div>
         </div>
     </div>
     <div id="footer">
@@ -57,5 +94,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- my script -->
+    <script src="{{url_for('static', filename='script.js')}}"></script>
   </body>
 </html>
