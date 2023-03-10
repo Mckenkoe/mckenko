@@ -13,14 +13,17 @@ body{
 
 #about{
     background-color: white;
+    /* color: #FF9494; */
 }
 
 #exp{
     background-color: #FFE3E1;
+    color: #FF9494;
 }
 
 #contact{
     background-color: white;
+    color: #FF9494;
 }
 
 /* classes */
@@ -62,13 +65,21 @@ body{
 }
 
 .projects-container{
-    
+    margin: 5vh 15vw
 }
 
 .card{
     max-width: 325px;
     max-height: 300;
     border-radius: 20px;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+.card:active{
+    transform: translateY(8px);
 }
 
 .card > img{
